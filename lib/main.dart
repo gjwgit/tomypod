@@ -37,6 +37,8 @@ void main() async {
     null;
   };
 
+  // Suport window size and top placement for desktop apps.
+
   if (isDesktop) {
     WidgetsFlutterBinding.ensureInitialized();
 
@@ -69,17 +71,21 @@ void main() async {
       await windowManager.setAlwaysOnTop(false);
     });
   }
-  runApp(const MyApp());
+
+  // Ready to now run the app.
+
+  runApp(const ToMyPod());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class ToMyPod extends StatelessWidget {
+  const ToMyPod({super.key});
 
   // This widget is the root of your application.
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'To My POD',
       theme: ThemeData(
         // This is the theme of your application.
         //
