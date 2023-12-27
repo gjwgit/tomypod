@@ -15,3 +15,10 @@ adjunct although so is Nextcloud which is supported
 + [OpenTracks](https://github.com/OpenTracksApp/OpenTracks)
 + Fitbit
 
+## Design
+
+Each app, like OpenTracks, has format options for the data store,
+often a standard format. On my POD there will be a folder for the app,
+like `opentracks` into which the data will be stored, encrypted. The
+data is then available to any app on the POD ecosystem. Such apps
+might display the tails recorded, perform analysis of my tracks, etc.
