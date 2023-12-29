@@ -1,6 +1,6 @@
 /// This is a basic template app to begin a Solid POD project.
 //
-// Time-stamp: <Wednesday 2023-12-27 11:21:29 +1100 Graham Williams>
+// Time-stamp: <Friday 2023-12-29 17:00:13 +1100 Graham Williams>
 //
 /// Copyright (C) 2024, Graham.Williams@togaware.com
 ///
@@ -62,7 +62,7 @@ void main() async {
 
       // The [title] is used for the window manager's window title.
 
-      title: 'PodNotes - A note taking app with private PODs',
+      title: 'ToMy POD - Pipeline data to my POD',
     );
 
     windowManager.waitUntilReadyToShow(windowOptions, () async {
