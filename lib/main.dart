@@ -89,14 +89,14 @@ class ToMyPod extends StatelessWidget {
       theme: ThemeData(
         // Change the theme for the app here.
 
-        cardTheme: CardTheme(
+        cardTheme: const CardTheme(
           color: Color(0XFFA6DCC2),
         ),
 
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: TextButton.styleFrom(
             padding: const EdgeInsets.all(20),
-            backgroundColor: Color(0XFF74A58D),
+            backgroundColor: const Color(0XFF74A58D),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
             ),
