@@ -1,6 +1,6 @@
 /// This is a basic template app to begin a Solid POD project.
 //
-// Time-stamp: <Friday 2024-01-05 16:32:29 +1100 Graham Williams>
+// Time-stamp: <Saturday 2024-01-06 10:01:03 +1100 Graham Williams>
 //
 /// Copyright (C) 2024, Graham.Williams@togaware.com
 ///
@@ -22,20 +22,19 @@
 // this program.  If not, see <https://www.gnu.org/licenses/>.
 ///
 /// Authors: Graham Williams
+library;
 
 import 'package:flutter/material.dart';
 
 import 'package:solid/solid.dart';
 import 'package:window_manager/window_manager.dart';
 
-import 'utils/is_desktop.dart';
+import 'package:tomypod/utils/is_desktop.dart';
 
 void main() async {
   // Remove [debugPrint] messages from production code.
 
-  debugPrint = (String? message, {int? wrapWidth}) {
-    null;
-  };
+  debugPrint = (message, {wrapWidth}) {};
 
   // Suport window size and top placement for desktop apps.
 
@@ -44,7 +43,7 @@ void main() async {
 
     await windowManager.ensureInitialized();
 
-    WindowOptions windowOptions = const WindowOptions(
+    const windowOptions = WindowOptions(
       // Setting [alwaysOnTop] here will ensure the app starts on top of other
       // apps on the desktop so that it is visible. We later turn it of as we
       // don't want to force it always on top.
@@ -65,7 +64,7 @@ void main() async {
       title: 'ToMy POD - Pipeline data to my POD',
     );
 
-    windowManager.waitUntilReadyToShow(windowOptions, () async {
+    await windowManager.waitUntilReadyToShow(windowOptions, () async {
       await windowManager.show();
       await windowManager.focus();
       await windowManager.setAlwaysOnTop(false);
@@ -109,8 +108,8 @@ class ToMyPod extends StatelessWidget {
       home: const SolidLogin(
         image: AssetImage('assets/images/tomy_image.jpg'),
         logo: AssetImage('assets/images/tomy_logo.png'),
-        title: "DATA PIPELINES TO YOUR POD",
-        link: "https://github.com/gjwgit/tomypod",
+        title: 'DATA PIPELINES TO YOUR POD',
+        link: 'https://github.com/gjwgit/tomypod',
         child: Scaffold(body: Text('ToMyPod Placeholder')),
       ),
     );
