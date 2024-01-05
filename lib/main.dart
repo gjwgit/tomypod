@@ -1,6 +1,6 @@
 /// This is a basic template app to begin a Solid POD project.
 //
-// Time-stamp: <Monday 2024-01-01 14:16:12 +1100 Graham Williams>
+// Time-stamp: <Friday 2024-01-05 16:32:29 +1100 Graham Williams>
 //
 /// Copyright (C) 2024, Graham.Williams@togaware.com
 ///
@@ -87,23 +87,24 @@ class ToMyPod extends StatelessWidget {
     return MaterialApp(
       title: 'To My POD',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a purple toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+        // Change the theme for the app here.
+
+        cardTheme: CardTheme(
+          color: Color(0XFFA6DCC2),
+        ),
+
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: TextButton.styleFrom(
+            padding: const EdgeInsets.all(20),
+            backgroundColor: Color(0XFF74A58D),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
+            ),
+            textStyle: const TextStyle(
+              color: Colors.white, // TODO 20240105 gjw NOT WORKING.
+            ),
+          ),
+        ),
       ),
       home: const SolidLogin(
         image: AssetImage('assets/images/tomy_image.jpg'),
