@@ -1,6 +1,6 @@
 /// This is a basic template app to begin a Solid POD project.
 //
-// Time-stamp: <Saturday 2024-01-06 10:01:03 +1100 Graham Williams>
+// Time-stamp: <Thursday 2024-02-01 13:33:22 +1100 Graham Williams>
 //
 /// Copyright (C) 2024, Graham.Williams@togaware.com
 ///
@@ -106,8 +106,8 @@ class ToMyPod extends StatelessWidget {
         ),
       ),
       home: const SolidLogin(
-        image: AssetImage('assets/images/tomy_image.jpg'),
-        logo: AssetImage('assets/images/tomy_logo.png'),
+        image: AssetImage('assets/images/image.jpg'),
+        logo: AssetImage('assets/images/icon.png'),
         title: 'DATA PIPELINES TO YOUR POD',
         link: 'https://github.com/gjwgit/tomypod',
         child: Scaffold(body: Text('ToMyPod Placeholder')),
